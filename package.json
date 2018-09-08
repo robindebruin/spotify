@@ -1,24 +1,18 @@
 {
-  "name": "my-app",
+  "name": "spotify",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2"
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
   },
   "devDependencies": {
-    "eslint": "^5.5.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "gh-pages": "^1.2.0",
-    "react-scripts": "1.0.2"
+    "react-scripts": "1.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "homepage": "https://robindebruin.github.io/spotify/build"
+    "eject": "react-scripts eject"
+  }
 }
