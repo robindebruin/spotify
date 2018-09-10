@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+
 import {Testje} from './atoms/Testje';
 import {SimpleForm} from './atoms/SimpleForm';
+import {FirstAxiosTest} from './atoms/FirstAxiosTest';
 
 class App extends Component {
   render() {
@@ -20,6 +22,8 @@ class App extends Component {
           <Testje name="Robin"></Testje>
           <br/>
           <SimpleForm></SimpleForm>
+          <br></br>
+          <FirstAxiosTest></FirstAxiosTest>
       </div>
     );
   }
