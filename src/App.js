@@ -4,7 +4,7 @@ import './App.css';
 
 import {Testje} from './atoms/Testje';
 import {SimpleForm} from './atoms/SimpleForm';
-import {FirstAxiosTest} from './atoms/FirstAxiosTest';
+import {AccesSpotify} from './atoms/AccesSpotify';
 
 class App extends Component {
   render() {
@@ -22,8 +22,8 @@ class App extends Component {
           <Testje name="Robin"></Testje>
           <br/>
           <SimpleForm></SimpleForm>
-          <br></br>
-          <FirstAxiosTest></FirstAxiosTest>
+          <br/><br/><br/>
+          <AccesSpotify></AccesSpotify>
       </div>
     );
   }
