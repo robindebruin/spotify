@@ -5,26 +5,13 @@ import './App.css';
 import {Testje} from './atoms/Testje';
 import {SimpleForm} from './atoms/SimpleForm';
 import {AccesSpotify} from './atoms/AccesSpotify';
+import BasicExample from './atoms/BasicExample';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-
-          <Testje name="Robin"></Testje>
-          <br/>
-          <SimpleForm></SimpleForm>
-          <br/><br/><br/>
-          <AccesSpotify></AccesSpotify>
-      </div>
+      <BasicExample></BasicExample>
     );
   }
 }
