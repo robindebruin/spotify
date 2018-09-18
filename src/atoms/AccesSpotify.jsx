@@ -4,10 +4,10 @@ export class AccesSpotify extends Component {
 
 	constructor() {
 		super()
-		this.state = { value: 'some val' };
+		this.state = { value: 'connect to spotify' };
 
 		this.credentials = {
-			client_id: "",
+			client_id: "80926ada65e247458639a354f4260ed8",
 			response_type: "token",
 			redirect_uri: "http:127.0.0.1:3000%2Fcallback",
 			state: "123",

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import  { Redirect } from 'react-router-dom'
 
 export class Callback extends Component {
 
   constructor(props) {
     super(props);    
-    const callbackObject = this.hashPropsToObj(props.location.hash);
-    console.log('callbackObject ', callbackObject);
+    this.callbackObject = props.location.hash && this.hashPropsToObj(props.location.hash);
+    console.log('callbackObject ', this.callbackObject.access_token);
   }
 
   hashPropsToObj(hash) {
@@ -18,8 +19,11 @@ export class Callback extends Component {
   }
 
   render() {
+    if (this.callbackObject) return <Redirect to='/home'  />
+
     return (
-      <h1>callback</h1>
+    <h1>not logged in</h1>
     )
   }
+  
 }
