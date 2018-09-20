@@ -6,7 +6,7 @@ export class Callback extends Component {
   constructor(props) {
     super(props);    
     this.callbackObject = props.location.hash && this.hashPropsToObj(props.location.hash);
-    console.log('callbackObject ', this.callbackObject.access_token);
+    console.log('callbackObject ', this.callbackObject.access_token);    
   }
 
   hashPropsToObj(hash) {
@@ -19,7 +19,7 @@ export class Callback extends Component {
   }
 
   render() {
-    if (this.callbackObject) return <Redirect to='/home'  />
+    if (this.callbackObject) return <Redirect to='/'  />
 
     return (
     <h1>not logged in</h1>
