@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import {AccesSpotify} from './atoms/AccesSpotify';
 import {Callback} from './atoms/Callback';
+import StoreTest from './atoms/StoreTest';
+
 
 class App extends Component {
   render() {
@@ -18,11 +20,15 @@ class App extends Component {
           <li>
             <Link to="/login">AccesSpotify</Link>
           </li>
+          <li>
+            <Link to="/storetest">StoreTest</Link>
+          </li>
         </ul>
         <hr />
         <Route exact path="/" component={Home} />
         <Route path="/login" component={AccesSpotify} />
         <Route path="/callback" component={Callback} />
+        <Route path="/storetest" component={StoreTest} />
       </div>
     </Router>
     );
@@ -35,6 +41,7 @@ const Home = () => (
     <h2>Home</h2>
   </div>
 );
+
 
 
 export default App;
