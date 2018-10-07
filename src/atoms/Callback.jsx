@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
+import { addBearerToken } from '../actions';
+import { connect } from "react-redux";
 
-export class Callback extends Component {
+
+const mapDispatchToProps = dispatch => {
+  return {
+    addBearerToken: bbToken => dispatch(addBearerToken(bbToken))
+  }
+}
+
+class ConnectedCallback extends Component {
 
   constructor(props) {
     super(props);
     this.callbackObject = props.location.hash && this.hashPropsToObj(props.location.hash);
-    sessionStorage.setItem('BearerToken', `Bearer ${this.callbackObject.access_token}`);
-
-    console.log('BearerToken ', sessionStorage.getItem('BearerToken'));
+    this.props.addBearerToken(this.callbackObject)
   }
 
   hashPropsToObj(hash) {
@@ -23,10 +30,11 @@ export class Callback extends Component {
 
   render() {
     if (this.callbackObject) return <Redirect to='/' />
-
     return (
       <h1>not logged in</h1>
     )
   }
-
 }
+
+const Callback = connect(null, mapDispatchToProps)(ConnectedCallback);
+export default Callback;
